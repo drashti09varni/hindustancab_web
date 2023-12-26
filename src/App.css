@@ -1,38 +1,559 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100%;
+  /* background-color: rgb(110, 110, 110); */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(../src/Images/hindustanrides/font/AnebaNeue-Bold.ttf);
+}
+
+.my-font{
+  font-family: myFirstFont;
+  
+}
+.nav {
+
+  justify-content: right;
+  align-items: right;
+
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+  margin: 0 1rem;
+  color: #000;
+}
+
+.bg-dunes {
+  background-image: url('./Images/hindustanrides/banner.a2f4c82541ea2f2aff11.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.bg-testimonial {
+  background-image: url('./Images/hindustanrides/about-testimonial.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.background {
+  background-image: url('./Images/Aboutus/cab_banner-aboutUs.webp');
+}
+
+@media only screen and (max-width: 768px) {
+  .bg-dunes {
+    background-image: none;
+    background-color: #4875F1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section {
+  display: block;
+  padding: 0 4em 5em;
+}
+
+#intro {
+  padding-top: 3em;
+  position: relative;
+}
+
+#intro div {
+  display: inline-table;
+}
+
+#intro-info {
+  width: 50%;
+  float: left;
+  margin-top: 5.8%;
+}
+
+#intro-info h1 {
+  font-size: 50px;
+  font-weight: 600;
+
+}
+
+
+
+
+#development-img {
+  width: 50%;
+  text-align: right;
+}
+
+#development-img img {
+  max-width: 100%;
+}
+
+
+
+
+.wrapper {
+  margin: 8px 0;
+}
+
+.search-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+}
+
+input {
+  min-width: 20px;
+  padding: 8px;
+  margin: 0 4px 0 0;
+  border: 1px solid #666;
+  border-radius: 5px;
+  height: 30px;
+}
+
+.button {
+  padding: 8px 16px;
+  min-height: 48px;
+  min-width: 10px;
+  word-wrap: nowrap;
+  background: #000;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+input {
+  order: 0;
+  align-self: auto;
+}
+
+.search {
+  flex: 2 1 auto;
+}
+
+.date-from {
+  flex: 1 1 auto;
+}
+
+.date-to {
+  flex: 1 1 auto;
+}
+
+.button {
+  order: 4;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+
+
+
+.header-z-index {
+  z-index: 100;
+}
+
+
+
+
+
+
+.car-animation {
+  animation-name: fadeInTopRight;
+  visibility: visible;
+  animation-duration: 2s;
+  animation-delay: 0.1s;
+
+}
+
+
+
+@keyframes fadeInTopRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, -100%, 0);
+    transform: translate3d(100%, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+
+.animation-1 {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-name: fadeInDown;
+}
+
+.animation-2 {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: fadeInDown;
+}
+
+.animation-3 {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+  animation-name: fadeInDown;
+}
+
+.about-text {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-name: fadeInDown;
+}
+
+.about-img {
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  visibility: visible;
+  animation-name: fadeInLeftBig;
+
+}
+
+.our-slider {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-name: fadeInDown;
+}
+
+.text-animation {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-name: fadeInDown;
+}
+
+.sidebox-animation-1 {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-name: fadeInLeft;
+}
+
+.sidebox-animation-2 {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+  animation-name: fadeInLeft;
+}
+
+.sidebox-animation-3 {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-name: fadeInLeft;
+}
+
+.sidebox-animation-4 {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-name: fadeInLeft;
+}
+
+.mobile-animation {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-name: fadeInUp;
+}
+
+.testimonial-text {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-name: fadeInDown;
+}
+
+.vert-move {
+  animation: mover 0.5s infinite alternate;
+}
+
+.about-1 {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-name: zoomIn;
+}
+
+.about-2 {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-name: zoomIn;
+
+}
+
+.about-3 {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+  animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.slick-slide {
+  width: 500px;
+}
+
+.card {
+  width: 100px;
+}
+
+
+
+.force-overflow {
+  min-height: 450px;
+}
+
+.ul-tags-footer {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+/*
+ *  STYLE 1
+ */
+
+#style-1::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.photos {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.thumbnails {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.thumbnails img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
 }
+
+.black {
+  text-align: center;
+  background: #023dabdb;
+  background-blend-mode: multiply;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 1;
+}
+
+.title {
+  color: #000;
+  font-size: 2em;
+  align-self: center;
+  position: absolute;
+  z-index: 10;
+}
+
+.title {
+  color: #000;
+  font-size: 2em;
+  align-self: center;
+  position: absolute;
+  z-index: 10;
+}
+
+
+.number-circle-list--list-item {
+  counter-increment: circle-counter;
+}
+.number-circle-list--list-item:before {
+  content: counter(circle-counter);
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  color: black;
+  text-align: center;
+  margin-right: 0.5rem;
+  position: relative;
+  top: -2px;
+}
+
+
+.react-datepicker__input-container {
+  position: inherit;
+  width: 100%;
+}
+
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-btn-primary {
+  color: #000;
+  background-color: #1677ff;
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 10% 20% 50% 10%;
+}
+@media (max-width: 504px){
+  .xl-width-box{
+      width: -webkit-fill-available;
+  }
+  }
+
+@media (max-width: 375px){
+.xl-width-box{
+    width: -webkit-fill-available;
+}
+}
+
+
+
+.shadow-img{
+  box-shadow:  0px 0px 5px 0px rgba(0,0,0,0.5) ;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
