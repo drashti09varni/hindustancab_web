@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Logo from '../../Images/hindustanrides/Perfect Time, Perfrct Place .png';
+import LogoBlack from '../../Images/hindustanrides/logo-black.png';
+import LogoWhite from '../../Images/hindustanrides/logo-white.png';
+
+import Logo from '../../Images/hindustanrides/logo-white.png';
+
 import { IoIosCall } from 'react-icons/io';
 import { AiOutlineClose } from 'react-icons/ai'
 import { Link, Outlet } from "react-router-dom";
@@ -10,12 +14,16 @@ export default function Header() {
     const [navSize, setnavSize] = useState("5rem");
     const [navColor, setnavColor] = useState("#f5f7f6");
     const [boxShadow, setBoxShadow] = useState("rgba(0, 0, 0, 0.24) 0px 3px 8px");
+    const [navLogo, setNavLogo] = useState(LogoBlack);
+    const [navTextColor, setNavTextColor] = useState("#000");
 
 
     const listenScrollEvent = () => {
         window.scrollY > 10 ? setBoxShadow("rgba(0, 0, 0, 0.24) 0px 3px 8px") : setBoxShadow("rgba(0, 0, 0, 0.24) 0px 3px 8px");
-        window.scrollY > 10 ? setnavColor("#127384") : setnavColor("#f5f7f6");
+        window.scrollY > 10 ? setnavColor("#000") : setnavColor("#f5f7f6");
         window.scrollY > 10 ? setnavSize("5rem") : setnavSize("5rem");
+        window.scrollY > 10 ? setNavLogo(LogoWhite) : setNavLogo(LogoBlack);
+        window.scrollY > 10 ? setNavTextColor("#fff") : setNavTextColor("#000");
     };
     useEffect(() => {
         window.addEventListener("scroll", listenScrollEvent);
@@ -26,7 +34,7 @@ export default function Header() {
 
     return <>
         <div>
-            <div className="flex navbar fixed " style={{
+            <div className="flex navbar fixed" style={{
                 backgroundColor: navColor,
                 height: navSize,
                 transition: "all 1s",
@@ -34,14 +42,9 @@ export default function Header() {
             }}>
 
                 <div className="flex flex-row items-center justify-between  ">
-                    <a className="pl-7 flex logo lg:ml-10" href="/">
-                        <img src={Logo} alt="logo" className="w-[220px] h-[35px]" />
-                        <div className="ml-5 text-[#000] lg:invisible xmd:invisible md:visible xsm:visible sm:visible xl:invisible 2xl:invisible ">
-                            <div className="flex">
-                                <IoIosCall size={20} />  <p className="mt-[-5px]">+91-9054865866</p>
-                            </div>
-
-                        </div>
+                    <a className="pl-5 flex logo lg:ml-10" href="/">
+                        <img src={navLogo} alt="logo" className="w-[220px] h-[35px]" />
+                
                     </a>
 
                     {/* --------- Mobile design header ---------- */}
@@ -87,17 +90,43 @@ export default function Header() {
 
                     {/* --------- web design header ---------- */}
 
-                    <ul className="flex uppercase justify-around mr-0 lg:visible xmd:visible md:invisible xsm:invisible sm:invisible xl:invisible 2xl:invisible right-8 absolute">
-                        <Link to="/"><li className="text-[16px] font-bold text-blue-800 transition-all">Home</li></Link>
+                    <ul 
+                    className="flex uppercase justify-around mr-0 lg:visible xmd:visible md:invisible xsm:invisible sm:invisible 
+                    xl:invisible 2xl:invisible right-6 absolute " style={{color:navTextColor}} >
+                        <Link to="/">
+                            <li className="text-[16px] font-bold  transition-all lg:lg:m-7 xlg:m-6 xmd:m-4 xlg:m-6">
+                                Home
+                            </li>
+                        </Link>
+
+                        <li className="text-xl mt-[-5px] font-bold ">|</li>
+
+                        <Link to="/about-us">
+                            <li href="#product" className="text-[16px] lg:lg:m-7 xlg:m-6 xmd:m-4 xlg:m-6 font-bold transition-all ">
+                                about us
+                            </li> 
+                        </Link>
                         <li className="text-xl mt-[-5px] font-bold">|</li>
-                        <Link to="/about-us"><li href="#product" className="text-[16px]  font-bold text-blue-800 transition-all ">about us</li> </Link>
+                        
+                        <Link to="/driver">
+                            <li href="#faq" className="text-[16px] lg:lg:m-7 xlg:m-6 xmd:m-4 xlg:m-6  font-bold transition-all">
+                            driver
+                            </li>
+                            </Link>
                         <li className="text-xl mt-[-5px] font-bold">|</li>
-                        <Link to="/driver"><li href="#faq" className="text-[16px]  font-bold text-blue-800 transition-all">driver</li></Link>
+
+                        <Link to="/tours">
+                            <li href="#faq" className="text-[16px] lg:m-7 xlg:m-6 xmd:m-4 font-bold transition-all">
+                                Tour
+                            </li>
+                        </Link>
                         <li className="text-xl mt-[-5px] font-bold">|</li>
-                        <Link to="/tours"><li href="#faq" className="text-[16px]  font-bold text-blue-800 transition-all">Tour</li></Link>
-                        <li className="text-xl mt-[-5px] font-bold">|</li>
-                        <Link to="/contact-us"><li href="#contact" className="text-[16px]  font-bold text-blue-800 transition-all ">Contact us</li></Link>
-                        <a className="flex text-[15px] font-semibold text-blue-800 bg-yellow px-6 border-1 ml-10 
+                        <Link to="/contact-us">
+                            <li href="#contact" className="text-[16px] lg:m-7 xlg:m-6 xmd:m-4  font-bold transition-all ">
+                            Contact us
+                            </li>
+                        </Link>
+                        <a className="flex text-[15px] font-semibold bg-yellow px-6 border-1 ml-5 
                         border-yellow rounded-2xl py-1"   href='https://api.whatsapp.com/send?phone=917600060604&text='>Call @+91-9054865866</a>
                     </ul>
                 </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HiLocationMarker } from 'react-icons/hi';
 import { MdDateRange } from 'react-icons/md';
 import DatePicker from "react-datepicker";
@@ -6,8 +6,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import { TimePicker } from 'antd';
 import { FaClock } from 'react-icons/fa';
 import { useNavigate } from "react-router-dom";
-
-
 
 export default function OneWay() {
     const navigate = useNavigate();
@@ -17,14 +15,6 @@ export default function OneWay() {
     const [fatchCity, setFatchCity] = useState();
     const [redirect, setRedirect] = useState(false);
 
-    const [place1, setPlace1] = useState();
-    const [place2, setPlace2] = useState();
-    const placeInputRef1 = useRef(null);
-    const placeInputRef2 = useRef(null);
-    const [lat1, setLat1] = useState();
-    const [lng1, setLng1] = useState();
-    const [lat2, setLat2] = useState();
-    const [lng2, setLng2] = useState();
 
 
 
@@ -39,56 +29,10 @@ export default function OneWay() {
         setSelectedTime(time);
     };
 
-    useEffect(() => {
-        initPlaceAPI();
-    }, []);
+ 
 
-    const initPlaceAPI = () => {
-        let autocomplete1 = new window.google.maps.places.Autocomplete(
-            placeInputRef1.current,
-        );
-        new window.google.maps.event.addListener(
-            autocomplete1,
-            'place_changed',
-            function () {
-                let place = autocomplete1.getPlace();
-                setPlace1({
-                    address: place.formatted_address,
-                    lat: place.geometry.location.lat(),
-                    lng: place.geometry.location.lng()
-                });
-            }
-        );
-        let autocomplete2 = new window.google.maps.places.Autocomplete(
-            placeInputRef2.current,
-        );
-        new window.google.maps.event.addListener(
-            autocomplete2,
-            'place_changed',
-            function () {
-                let placee = autocomplete2.getPlace();
-                setPlace2({
-                    address: placee.formatted_address,
-                    lat: placee.geometry.location.lat(),
-                    lng: placee.geometry.location.lng()
-                });
-            }
-        );
-
-        new window.google.maps.event.addListener(
-            autocomplete1,
-            autocomplete2,
-            'place_changed',
-        );
-    };
-
-    useEffect(() => {
-        setLat1(place1?.lat);
-        setLng1(place1?.lng);
-        setLat2(place2?.lat);
-        setLng2(place2?.lng);
-
-    }, [place1][place2]);
+ 
+ 
 
     const calculateDistance = (e) => {
         // const radians = (degrees) => {
@@ -243,6 +187,7 @@ export default function OneWay() {
             console.log(err)
         }
     }
+
     const handlefatchCity = async () => {
 
         try {
@@ -268,9 +213,7 @@ export default function OneWay() {
         handlefatchCity();
     }, []);
     return <>
-        <div >
-
-
+ <div className="flex justify-center items-center ">
             <div className="grid lg:grid-cols-5 xmd:grid-cols-5 md:grid-cols-5 xsm:grid-cols-5 gap-3 px-10 py-5">
 
                 <div className="col-span-1 relative">
@@ -335,8 +278,6 @@ export default function OneWay() {
                 </button>
 
             </div>
-
-
-        </div>
+    </div>
     </>
 }

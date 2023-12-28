@@ -82,7 +82,7 @@ export default function HowItWork() {
                         </div>
                     </article> */}
 
-                    <div className="grid grid-cols-3 text-center gap-16">
+                    <div className="grid lg:grid-cols-3 xmd:grid-cols-3 md:grid-cols-3 xsm:grid-cols-3 sm:grid-cols-1 xl:grid-cols-1 2xl:grid-cols-1   text-center gap-16">
                         <div className="flex flex-col items-center">
                             <div className=' flex items-center justify-center rounded-full border-2 border-dashed  border-[#127384]'>
                                 <div className="bg-[#127384] p-4 m-2 rounded-full w-20">

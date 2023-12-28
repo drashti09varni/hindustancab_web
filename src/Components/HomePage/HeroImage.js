@@ -78,7 +78,7 @@ export default function HeroImage() {
           <HeroForm />
         </div>
       {/* Other Sections */}
-      <div className='how-it-works lg:block xmd:block md:block xsm:block sm:hidden xl:hidden 2xl:hidden'>
+      <div className='how-it-works lg:block xmd:block md:block xsm:block sm:block xl:block 2xl:block'>
         <HowItWork />
       </div>
  
@@ -86,7 +86,7 @@ export default function HeroImage() {
       <AboutUs />
       <Testimonial />
       <WhyChooseUs/>
-<VideoList />
+{/* <VideoList /> */}
       <Memories />
     </>
   );
