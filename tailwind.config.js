@@ -9,6 +9,7 @@ module.exports = {
       '2xl':'210px',
       'xl':'375px',
       'sm':'504px',
+      'slider':'600px',
       'xsm':'768px',
       'md': '960px',
       'xmd':'1024px',

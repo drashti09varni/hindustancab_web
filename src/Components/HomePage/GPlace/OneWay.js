@@ -29,12 +29,7 @@ export default function OneWay() {
         setSelectedTime(time);
     };
 
- 
-
- 
- 
-
-    const calculateDistance = (e) => {
+     const calculateDistance = (e) => {
         // const radians = (degrees) => {
         //     return degrees * (Math.PI / 180);
         // };
@@ -213,14 +208,14 @@ export default function OneWay() {
         handlefatchCity();
     }, []);
     return <>
- <div className="flex justify-center items-center ">
-            <div className="grid lg:grid-cols-5 xmd:grid-cols-5 md:grid-cols-5 xsm:grid-cols-5 gap-3 px-10 py-5">
+    {/* <div className="flex justify-center items-center ">
+            <div className="grid lg:grid-cols-5 xmd:grid-cols-5 md:grid-cols-3 xsm:grid-cols-3 sm:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-1  gap-3  ms:px-5 py-5">
 
                 <div className="col-span-1 relative">
                     <span className="material-icons absolute inset-y-0 left-0 flex items-center pl-2 text-gray-500">
                         <HiLocationMarker fill='#127384' size={20} className='mt-[-9px]'/>
                     </span>
-                    <select className=" pl-8 pr-2 py-3  rounded-lg w-full placehoder:font-bold 
+                    <select className=" pl-8 pr-2 py-3  rounded-lg placehoder:font-bold 
                     lg:border xmd:border md:border xsm:border sm:border xl:border 2xl:border border-[#dadada]" >
                         <option value="" >Select Pickup City</option>
                         <option value="surat">Surat</option>
@@ -278,6 +273,68 @@ export default function OneWay() {
                 </button>
 
             </div>
-    </div>
+    </div> */}
+    <div className="flex justify-center items-center">
+            <div className="w-full px-5 py-5">
+                <div className="grid lg:grid-cols-5 xlg:grid-cols-5 xmd:grid-cols-5 md:grid-cols-5 
+                xsm:grid-cols-3 sm:grid-cols-2  xl:grid-cols-1 2xl:grid-cols-1 gap-3">
+                    {/* Adjusted styles for full-width */}
+                    <div className="relative">
+                        <span className="material-icons absolute left-0 top-3 flex items-center pl-2 text-gray-500">
+                            <HiLocationMarker fill='#127384' size={20} className=''/>
+                        </span>
+                        <select className="pl-8 pr-2 py-3 rounded-lg w-full border-[#dadada] border">
+                            <option value="">Select Pickup City</option>
+                            <option value="surat">Surat</option>
+                        </select> 
+                    </div>
+
+                    <div className="relative">
+                        <span className="material-icons absolute left-0 top-3 flex items-center pl-2 text-gray-500">
+                            <HiLocationMarker fill='#127384' size={20} className=''/></span>
+                        <select className="pl-8 pr-2 py-3 rounded-lg w-full border-[#dadada] border" onChange={handleChange}>
+                            <option value="">Select Drop City</option>
+                            {fatchCity?.map((items, i) => (
+                                <option value={items.city_name} key={items.id}>{items.city_name}</option>
+                            ))}
+                        </select>
+                    </div>
+
+                    <div className="relative ">
+                        {/* <span className="material-icons absolute left-0 top-3 flex items-center pl-2 text-[#000]">
+                            <MdDateRange fill='#127384' size={20} className='mt-[2px]' />
+                        </span> */}
+                        {/* <DatePicker
+                            selected={selectedDate}
+                            onChange={handleDateChange}
+                            placeholderText='Select a date'
+                            className="pl-8 z-0 pr-2 py-6 border rounded-lg w-full border-[#dadada] "
+                        /> */}
+                        <input type="date" className=" z-0 pr-2 pb-8 pt-3 border rounded-lg w-full border-[#dadada] "/>
+                    </div>
+
+                    <div className="relative">
+                        <FaClock className="absolute left-2 top-1/2 " />
+                        <TimePicker
+                            format="h:mm a"
+                            showNow={false}
+                            use12Hours
+                            value={selectedTime}
+                            onChange={handleTimeChange}
+                            showSecond={false}
+                            hideDisabledOptions
+                            minuteStep={5}
+                            className="pl-8 pr-2 py-3 border rounded-lg w-full border-[#dadada]"
+                        />
+                    </div>
+                    <button
+                        className="float-right border border-yellow text-[#000] bg-yellow mt-[2px] py-2 text-[18px] font-mont  
+                        my-3 rounded font-[700] hover:bg-[#fff] hover:border-[#000] hover:border"
+                        onClick={() => { calculateDistance() }} >
+                        Search Cab
+                    </button>
+                </div>
+            </div>
+        </div>
     </>
-}
+    }

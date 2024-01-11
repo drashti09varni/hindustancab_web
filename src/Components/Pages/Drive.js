@@ -58,8 +58,8 @@ export default function Driver() {
                     <img src={BgImage} />
                     <div className="black"></div>
                     <div className="title font-mont font-[700] ">
-                        <div className='font-mont font-[700]'>Join as a Driver</div>
-                        <div className='flex space-x-3 text-[15px] font-[500] ml-6'>
+                        <div className='font-mont font-[700] text-[#ffa633] '>Join as a Driver</div>
+                        <div className='flex space-x-3 text-[15px] font-[500] ml-6 text-[#ffa633]'>
                             <Link to="/"><p>Home</p></Link> <p>&gt;</p> <p>Join as a Driver</p></div>
                     </div>
                 </div>

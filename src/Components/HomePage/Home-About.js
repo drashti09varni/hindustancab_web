@@ -8,21 +8,30 @@ export default function AboutUs() {
 
             <div className="w-full bg-white pt-7 pb-7  ">
             <center><h1 className='my-font  text-[35px] py-10 pb-16'>What People say about us?</h1></center>
-                <div className="box-border flex   items-center content-center lg:px-8  xmd:px-8 md:px-8 xsm:px-2 sm:px-0 mx-auto leading-6 text-black border-0 border-gray-300 border-solid 
+                <div className="box-border lg:flex  xlg:flex xmd:flex md:flex xsm:flex items-center content-center lg:px-8  xmd:px-8 md:px-8 xsm:px-2 sm:px-0 mx-auto leading-6 text-black border-0 border-gray-300 border-solid 
                  max-w-8xl lg:px-16">
 
 
                     <div className="box-border relative w-full max-w-md px-4 mt-5 mb-4 -ml-5  text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none
-                     lg:mb-0 lg:w-[50%] xmd:w-[50%] xl:pl-10 lg:block xmd:block md:block xsm:block sm:hidden xl:hidden 2xl:hidden">
+                     lg:mb-0 lg:w-[50%] xmd:w-[50%] xmd:w-[100%] xl:pl-10 lg:block xmd:block md:block xsm:block 
+                     sm:hiddeb xl:hidden 2xl:hidden">
                         <img src={about_img} className="p-2 pl-6 lg:pl-16 lg:pr-20 about-img" />
                     </div>
 
+                    <center><div className="box-border relative w-full max-w-md px-4 mt-5 mb-4 -ml-5  text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none
+                     lg:mb-0 lg:w-[50%] xmd:w-[50%] xmd:w-[100%] xl:pl-10 lg:hidden xmd:hidden md:hidden xsm:hidden 
+                     sm:block xl:block 2xl:block">
+                        <img src={about_img} className="p-2 pl-6 lg:pl-16 lg:pr-20 about-img" />
+                    </div></center>
 
-                    <div className="box-border  w-full text-black border-solid lg:w-[40%]  xmd:w-[50%] md:pl-10 md:order-none lg:p-0 md:p-0 xsm:p-0 sm:p-5  xl:p-5 2xl:p-5 ">
-                        <h2 className="m-0 lg:text-[25px]  xmd:text-[42px]  md:text-[42px] xsm:text-[42px] sm:text-[25px] 
-                        xl:text-[25px] 2xl:text-[20px] mb-[12px] pb-[5px] font-[600]  border-0 border-gray-300
+
+
+                    <div className="box-border  w-full text-black border-solid lg:w-[40%]  xmd:w-[50%] xmd:w-[100%] 
+                     md:pl-10 md:order-none lg:p-0 md:p-0 xsm:p-0 sm:px-16  xl:p-5 2xl:p-5 ">
+                        <h2 className="m-0 lg:text-[2rem]  mb-[12px] pb-[5px] font-[600]  border-0 border-gray-300
                          lg:text-3xl md:text-2xl about-text font-mont">
-                            About Hindustan Rides Taxi Service <br/> [Perfect Time, Perfect Place]
+                            About Hindustan Rides Taxi Service <br/> [Perfect Time, Perfect Place].
+
                         </h2>
                         <p className='text-[#292a2c] text-[18px] leading-7'>
                             <b>Hindustan Rides Taxi Service</b> is a premier transportation company that has been revolutionizing 

@@ -19,22 +19,46 @@ export default function App() {
     slidesToScroll: 2,
     className: 'theClass',
     arrows: false,
-    autoplay: true
-
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   };
+
 
   return (
     <div className='bg-testimonial my-24'>
-      <center className='text-[35px] font-mont py-12 my-font text-[#fff] '> Our Happy Client's Review
+      <center className='text-[35px] font-mont py-12 my-font text-[#fff] p-2'> Our Happy Client's Review
         <p className='font-mont text-[18px] mt-2'>Client's testimonial why People Love</p></center>
 
-      <div id="slider-container" className="max-w-5xl mx-auto mt-12 mb-20 " >
+      <div id="slider-container" className="lg:max-w-5xl xlg:max-w-5xl xmd:max-w-5xl md:max-w-3xl
+       xsm:max-w-3xl slider:max-w-xl sm:max-w-md xl:max-w-xs 2xl:max-w-xs  mx-auto mt-12 mb-20 " >
 
         <Slider {...settings}>
 
           <article className="mb-20 ">
-            <div className='flex p-5 hover:text-[#fff]  shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] h-[210px]
-             w-[480px] bg-[#fff] rounded hover:bg-[#127384]'>
+            <div className='flex p-5 hover:text-[#fff]  shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] h-[100%]
+             lg:w-[480px] xlg:w-[480px] xmd:w-[480px] md:w-[355px] xsm:w-[355px] slider:w-[100%] sm:w-[100%] xl:w-[100%] 2xl:w-[100%]  bg-[#fff] rounded hover:bg-[#127384]'>
               <div className="flex flex-col">
                 <BiSolidQuoteLeft size={25} fill='#fcaf21' />
                 <div className="mr-4 flex space-x-3 py-2">
@@ -51,7 +75,8 @@ export default function App() {
 
 
           <article className="mb-20">
-            <div className='flex p-5 hover:text-[#fff] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] h-[210px] w-[480px] bg-[#fff] rounded hover:bg-[#127384]' >
+            <div className='flex p-5 hover:text-[#fff] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]  h-[100%]
+           lg:w-[480px] xlg:w-[480px] xmd:w-[480px] md:w-[355px] xsm:w-[355px] slider:w-[100%] sm:w-[100%] xl:w-[100%] 2xl:w-[100%]  bg-[#fff] rounded hover:bg-[#127384]' >
               <div className="flex flex-col">
                 <BiSolidQuoteLeft size={25} fill='#fcaf21' />
                 <div className="mr-4 flex space-x-3 py-2">
@@ -68,7 +93,8 @@ export default function App() {
 
 
           <article className="mb-20">
-            <div className='flex p-5 hover:text-[#fff] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] h-[210px] w-[480px] bg-[#fff] rounded hover:bg-[#127384]'>
+            <div className='flex p-5 hover:text-[#fff] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]  h-[100%]
+             lg:w-[480px] xlg:w-[480px] xmd:w-[480px] md:w-[355px] xsm:w-[355px] slider:w-[100%] sm:w-[100%] xl:w-[100%] 2xl:w-[100%] bg-[#fff] rounded hover:bg-[#127384]'>
               <div className="flex flex-col">
                 <BiSolidQuoteLeft size={25} fill='#fcaf21' />
                 <div className="mr-4 flex space-x-3 py-2">
@@ -84,7 +110,8 @@ export default function App() {
           </article>
 
           <article className="mb-20">
-            <div className='flex p-5  hover:text-[#fff] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] h-[210px] w-[480px] bg-[#fff] rounded hover:bg-[#127384]'>
+            <div className='flex p-5  hover:text-[#fff] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]  h-[100%]
+             lg:w-[480px] xlg:w-[480px] xmd:w-[480px] md:w-[355px] xsm:w-[355px] slider:w-[100%] sm:w-[100%] xl:w-[100%] 2xl:w-[100%]   bg-[#fff] rounded hover:bg-[#127384]'>
               <div className="flex flex-col">
                 <BiSolidQuoteLeft size={25} fill='#fcaf21' />
                 <div className="mr-4 flex space-x-3 py-2">
@@ -98,11 +125,7 @@ export default function App() {
               </div>
             </div>
           </article>
-
-
         </Slider>
-
-
       </div>
     </div>
   );

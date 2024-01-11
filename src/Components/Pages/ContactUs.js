@@ -99,8 +99,8 @@ export default function ContactUs() {
           <img src={BgImage} />
           <div className="black"></div>
           <div className="title font-mont font-[700] ">
-            <div>Contact Us</div>
-            <div className='flex space-x-3 text-[15px] font-[500]'>
+            <div className='text-[#ffa633]'>Contact Us</div>
+            <div className='flex space-x-3 text-[15px] font-[500] text-[#ffa633]'>
               <Link to="/"><p>Home</p></Link> <p>&gt;</p> <p>Contact Us</p></div>
           </div>
         </div>

@@ -34,8 +34,8 @@ export default function Tours() {
                     <img src={BgImage} />
                     <div className="black"></div>
                     <div className="title font-mont font-[700] ">
-                        <div className='font-mont font-[700]'>Tour packages</div>
-                        <div className='flex space-x-3 text-[15px] font-[500]'>
+                        <div className='font-mont font-[700] text-[#ffa633]'>Tour packages</div>
+                        <div className='flex space-x-3 text-[15px] font-[500] text-[#ffa633]'>
                             <Link to="/"><p>Home</p></Link> <p>&gt;</p> <p>About Us</p></div>
                     </div>
                 </div>

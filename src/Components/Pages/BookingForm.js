@@ -88,8 +88,8 @@ console.log(selectData);
           <img src={BgImage} />
           <div className="black"></div>
           <div className="title font-mont font-[700] ">
-            <div>Booking Form</div>
-            <div className='flex space-x-3 text-[15px] font-[500]'>
+            <div className='text-[#ffa633]'>Booking Form</div>
+            <div className='flex space-x-3 text-[15px] font-[500] text-[#ffa633]'>
               <p>Car Booking</p></div>
           </div>
         </div>
