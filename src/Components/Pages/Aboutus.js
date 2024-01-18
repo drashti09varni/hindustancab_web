@@ -90,17 +90,7 @@ export default function Aboutus() {
                 </div>
             </div>
         </div>
-        <div className="max-w-6xl mx-auto my-10 flex justify-center items-center">
-            <div className="text-center">
-                <h1 className='text-[30px] font-[700] font-mont'>Why People Love</h1>
-                <button className="text-[18px] vert-move bg-yellow text-[#144298] px-10 py-2 my-7 rounded-3xl font-[600] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]">Know More</button>
-            </div>
-        </div>
+      
 
     </>
 }
-
-
-
-
-

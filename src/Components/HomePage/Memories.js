@@ -6,7 +6,6 @@ export default function Memories() {
 
         try {
             const addRecordEndpoint = "http://193.203.162.218:4200/api/v1/getmemories";
-
             const options = {
                 method: 'GET',
                 headers: {
@@ -23,27 +22,26 @@ export default function Memories() {
         }
     }
     useEffect(() => {
-
         fatchData();
     }, []);
     return <>
-        <div>
-            <center className='text-[30px] font-mont font-[700]'> Best Of Our Memories </center>
-            <div class="container my-12 mx-auto px-4 md:px-12">
-                <div class="flex flex-wrap -mx-1 lg:-mx-4">
-
-                    {data?.map((item,i) => {
-                        
-                        return<>
-                        <div class="my-1 px-1 w-[200px] md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4">
-                            <article class="overflow-hidden rounded-lg shadow-lg">
-                                <img src={`http://193.203.162.218:4200/uploads/memories/${item.memoriesImg}`}  />
-                            </article>
-                        </div>
-                        </>
-                    })}
-                </div>
+        <div className="flex flex-col items-center justify-center min-h-screen">
+      <center className='text-3xl font-mont font-bold mb-8 my-font'>Best Of Our Memories</center>
+      <div className="container mx-auto my-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          {data?.map((item, i) => (
+            <div key={i} className="flex justify-center h-[300px]">
+              <article className="overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src={`http://193.203.162.218:4200/uploads/memories/${item.memoriesImg}`}
+                  alt={`Memory ${i + 1}`}
+                  className='object-cover object-top h-[300px] w-[330px]'
+                />
+              </article>
             </div>
+          ))}
         </div>
+      </div>
+    </div>
     </>
 }

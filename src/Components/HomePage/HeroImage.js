@@ -65,7 +65,7 @@ export default function HeroImage() {
       <AboutUs />
       <Testimonial />
       <WhyChooseUs />
-      {/* <VideoList /> */}
+      <VideoList />
       <Memories />
     </>
   );

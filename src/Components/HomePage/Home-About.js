@@ -24,13 +24,11 @@ export default function AboutUs() {
                         <img src={about_img} className="p-2 pl-6 lg:pl-16 lg:pr-20 about-img" />
                     </div></center>
 
-
-
                     <div className="box-border  w-full text-black border-solid lg:w-[40%]  xmd:w-[50%] xmd:w-[100%] 
                      md:pl-10 md:order-none lg:p-0 md:p-0 xsm:p-0 sm:px-16  xl:p-5 2xl:p-5 ">
                         <h2 className="m-0 lg:text-[2rem]  mb-[12px] pb-[5px] font-[600]  border-0 border-gray-300
                          lg:text-3xl md:text-2xl about-text font-mont">
-                            About Hindustan Rides Taxi Service <br/> [Perfect Time, Perfect Place].
+                            About Hindustan Rides Taxi Service <br/> <p className='mt-1 text-[20px]'>[Perfect Time, Perfect Place].</p>
 
                         </h2>
                         <p className='text-[#292a2c] text-[18px] leading-7'>

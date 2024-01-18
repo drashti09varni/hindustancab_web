@@ -70,15 +70,15 @@ export default function Driver() {
             <div className='grid lg:grid-cols-2  xmd:grid-cols-2 md:grid-cols-2  xsm:grid-cols-2 sm:grid-cols-1 xl:grid-cols-1 2xl:grid-cols-1'>
                 <div className='px-6 leading-7 font-mont w-[100%]'>
 
-                    <h1 className='text-[35px] font-[700] py-4'>Join Buzzway Taxi service</h1>
+                    <h1 className='text-[35px] font-[700] py-4'>Join Hindustanrides Taxi service</h1>
                     <h3 className='text-[31px] mt-[-5px] font-[500]'>Start Earning Now !!!</h3>
-                    <h4 className='text-[25px] mt-[5px] font-[500]'>By Attaching Your Car with Buzzway</h4>
+                    <h4 className='text-[25px] mt-[5px] font-[500]'>By Attaching Your Car with Hindustanrides</h4>
                     <p className='py-3 text-[15px] font-[500] text-[#585B5F]'>
                         Increase you’re earning Attach your car and make the most of your resources, avail the best offers in the industry, experience the cutting edge technology and start earning bigger than ever of course with the largest growing network of active riders. Here we believe in camaraderie, we believe in sharing that's why we can offer the best. And we are proudly doing the same. If you have a car/taxi and you want to earn big amount, what are you waiting for! Let's go hand in hand.
                     </p>
                     <h2 className='text-[28px] mt-[5px] font-[600] mb-3 font-mont'>Cash out fast in your account</h2>
                     <p className='py-3 text-[15px] font-[500] text-[#585B5F]'>It’s easy to get paid. All you need is a bank account. Your earnings are transferred every week I your account
-                        <p>If your customer payment in cash With cash payment, you get paid immediately after you complete a trip. The app will show the amount to collect from your customer and calculate fees that you owe to Buzzway</p>
+                        <p>If your customer payment in cash With cash payment, you get paid immediately after you complete a trip. The app will show the amount to collect from your customer and calculate fees that you owe to Hindustanrides</p>
                     </p>
                 </div>
 
@@ -161,7 +161,7 @@ export default function Driver() {
             <div>
                 <h1 className='lg:text-[30px] xmd:text-[30px] md:text-[30px] xsm:text-[25px] xl:text-[25px] pl-5
                  py-10 font-[700] font-mont'
-                >For More in to join Buzzway Cab Call @ +91-9054865866</h1>
+                >For More in to join Hindustanrides Cab Call @ +91-9054865866</h1>
             </div>
 
             <h2 className='lg:text-[30px] xmd:text-[30px] md:text-[30px] xsm:text-[25px] xl:text-[20px]

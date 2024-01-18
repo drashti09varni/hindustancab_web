@@ -51,7 +51,8 @@ export default function Header() {
 
                     <a onClick={() => setOpenNav(true)} className="sm:absolute xl:absolute  2xl:absolute sm:right-14 xl:right-14  2xl:right-14 hamburger lg:invisible">
                         <svg width="20" height="16" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.124103 1.33333C0.124103 0.596954 0.721057 0 1.45744 0H18.6667C19.403 0 20 0.596954 20 1.33333C20 2.06971 19.403 2.66667 18.6667 2.66667H1.45744C0.721056 2.66667 0.124103 2.06971 0.124103 1.33333ZM0 8C0 7.26362 0.596954 6.66667 1.33333 6.66667H18.6667C19.403 6.66667 20 7.26362 20 8C20 8.73638 19.403 9.33333 18.6667 9.33333H1.33333C0.596955 9.33333 0 8.73638 0 8ZM0 14.6667C0 13.9303 0.596953 13.3333 1.33333 13.3333H18.6667C19.403 13.3333 20 13.9303 20 14.6667C20 15.403 19.403 16 18.6667 16H1.33333C0.596953 16 0 15.403 0 14.6667Z" fill="#000" /></svg>
+                            <path d="M0.124103 1.33333C0.124103 0.596954 0.721057 0 1.45744 0H18.6667C19.403 0 20 0.596954 20 1.33333C20 2.06971 19.403 2.66667 18.6667 2.66667H1.45744C0.721056 2.66667 0.124103 2.06971 0.124103 1.33333ZM0 8C0 7.26362 0.596954 6.66667 1.33333 6.66667H18.6667C19.403 6.66667 20 7.26362 20 8C20 8.73638 19.403 9.33333 18.6667 9.33333H1.33333C0.596955 9.33333 0 8.73638 0 8ZM0 14.6667C0 13.9303 0.596953 13.3333 1.33333 13.3333H18.6667C19.403 13.3333 20 13.9303 20 14.6667C20 15.403 19.403 16 18.6667 16H1.33333C0.596953 16 0 15.403 0 14.6667Z" 
+                            fill="#ffa633" /></svg>
                     </a>
                     {
                         openNav &&
@@ -60,31 +61,31 @@ export default function Header() {
                                 <AiOutlineClose size={25} />
                             </div>
                             <div className="flex flex-col  h-full  ml-auto z-50">
-                                <Link to="/"> <a onClick={() => setOpenNav(false)} href="/"
-                                    className=" text-xl font-semibold text-blue-800 py-2">
+                                <Link to="/" className="my-2"> <a onClick={() => setOpenNav(false)} href="/"
+                                    className=" text-[18px] font-semibold text-blue-800 ">
                                     Home
                                 </a>
                                 </Link>
-                                <Link to="/about-us"><a onClick={() => setOpenNav(false)}
-                                    className="text-xl font-semibold text-blue-800  py-2 transition-all hover:text-orange-500">
-                                    about us </a>
+                                <Link to="/about-us" className="my-2"><a onClick={() => setOpenNav(false)}
+                                    className="text-[18px] font-semibold text-blue-800  py-5 transition-all hover:text-orange-500">
+                                    About us </a>
                                 </Link>
 
-                                <Link to="/driver"><a onClick={() => setOpenNav(false)} href="#faq"
-                                    className="text-xl font-semibold text-blue-800  py-2 transition-all hover:text-orange-500">
-                                    driver
+                                <Link to="/driver" className="my-2" ><a onClick={() => setOpenNav(false)} href="#faq"
+                                    className="text-[18px] font-semibold text-blue-800  my-5 transition-all hover:text-orange-500">
+                                    Driver
                                 </a> </Link>
-                                <Link to="/contact-us"> <a onClick={() => setOpenNav(false)}
-                                    className="text-xl font-semibold text-blue-800  py-2 transition-all hover:text-orange-500">
+                                <Link to="/contact-us" className="my-2"> <a onClick={() => setOpenNav(false)}
+                                    className="text-[18px] font-semibold text-blue-800  py-5 transition-all hover:text-orange-500">
                                     Tour
                                 </a> </Link>
                                 <Link to="/contact-us"> <a onClick={() => setOpenNav(false)}
-                                    className="text-xl font-semibold text-blue-800  py-2 transition-all hover:text-orange-500">
+                                    className="text-[18px] font-semibold text-blue-800  py-5 transition-all hover:text-orange-500">
                                     Contact us
                                 </a> </Link>
-                                <a className="flex text-[15px] font-semibold text-blue-800 bg-blue px-6 border-1 w-[215px] my-2
+                                <a className="flex text-[15px] font-semibold text-blue-800 bg-[#fff] px-6 border-1 w-[215px] my-5
                         border-yellow text-[#000] rounded-2xl  py-1">Call @+91-9054865866</a>
-                            </div>
+                            </div> 
                         </div>
                     }
 
@@ -95,7 +96,7 @@ export default function Header() {
                     xl:invisible 2xl:invisible right-6 absolute " style={{color:navTextColor}} >
                         <Link to="/">
                             <li className="text-[16px] font-bold  transition-all lg:lg:m-7 xlg:m-6 xmd:m-4 xlg:m-6">
-                                Home
+                                Home 
                             </li>
                         </Link>
 

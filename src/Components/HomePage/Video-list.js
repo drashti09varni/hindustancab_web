@@ -1,48 +1,4 @@
-// import React from 'react'
-
-// export default function VideoList() {
-//   return (
-//     <div className='py-24'>
-//         <h1 className='text-[35px] my-font'><center>Little Glimpse Of Hindustan Rides</center></h1>
-//         <div class="flex flex-wrap">
-//   <div class="border-e border-gray-200 dark:border-gray-700">
-//     <nav class="flex flex-col space-y-2" aria-label="Tabs" role="tablist" data-hs-tabs-vertical="true">
-//       <button type="button" class="hs-tab-active:border-blue-500 hs-tab-active:text-blue-600 dark:hs-tab-active:text-blue-600 py-1 pe-4 inline-flex items-center gap-x-2 border-e-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:text-blue-500 active" id="vertical-tab-with-border-item-1" data-hs-tab="#vertical-tab-with-border-1" aria-controls="vertical-tab-with-border-1" role="tab">
-//         Tab 1
-//       </button>
-//       <button type="button" class="hs-tab-active:border-blue-500 hs-tab-active:text-blue-600 dark:hs-tab-active:text-blue-600 py-1 pe-4 inline-flex items-center gap-x-2 border-e-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:text-blue-500" id="vertical-tab-with-border-item-2" data-hs-tab="#vertical-tab-with-border-2" aria-controls="vertical-tab-with-border-2" role="tab">
-//         Tab 2
-//       </button>
-//       <button type="button" class="hs-tab-active:border-blue-500 hs-tab-active:text-blue-600 dark:hs-tab-active:text-blue-600 py-1 pe-4 inline-flex items-center gap-x-2 border-e-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:text-blue-500" id="vertical-tab-with-border-item-3" data-hs-tab="#vertical-tab-with-border-3" aria-controls="vertical-tab-with-border-3" role="tab">
-//         Tab 3
-//       </button>
-//     </nav>
-//   </div>
-
-//   <div class="ms-3">
-//     <div id="vertical-tab-with-border-1" role="tabpanel" aria-labelledby="vertical-tab-with-border-item-1">
-//       <p class="text-gray-500 dark:text-gray-400">
-//         This is the <em class="font-semibold text-gray-800 dark:text-gray-200">first</em> item's tab body.
-//       </p>
-//     </div>
-//     <div id="vertical-tab-with-border-2" class="hidden" role="tabpanel" aria-labelledby="vertical-tab-with-border-item-2">
-//       <p class="text-gray-500 dark:text-gray-400">
-//         This is the <em class="font-semibold text-gray-800 dark:text-gray-200">second</em> item's tab body.
-//       </p>
-//     </div>
-//     <div id="vertical-tab-with-border-3" class="hidden" role="tabpanel" aria-labelledby="vertical-tab-with-border-item-3">
-//       <p class="text-gray-500 dark:text-gray-400">
-//         This is the <em class="font-semibold text-gray-800 dark:text-gray-200">third</em> item's tab body.
-//       </p>
-//     </div>
-//   </div>
-// </div>
-//     </div>
-//   )
-// }
-
-import { useEffect, useRef, useState } from 'react';
-
+import { useState } from "react";
 import thumb1 from '../../Images/hindustanrides/videos/thumb-1.jpg';
 import thumb2 from '../../Images/hindustanrides/videos/thumb-2.jpg';
 import thumb3 from '../../Images/hindustanrides/videos/thumb-3.jpg';
@@ -52,69 +8,230 @@ import thumb6 from '../../Images/hindustanrides/videos/thumb-6.jpg';
 import thumb7 from '../../Images/hindustanrides/videos/thumb-7.jpeg';
 import thumb8 from '../../Images/hindustanrides/videos/thumb-8.jpg';
 import thumb9 from '../../Images/hindustanrides/videos/thumb-9.jpeg';
+import { FaCirclePlay } from "react-icons/fa6";
 
-const tabsData = [
-  {
-    label: 'DJ PARTY @ GOA',
-    thumbnail: thumb1,
-    link: 'https://youtu.be/ey4LD_iWNAU?si=NL_z-D2FcL8S69XK',
-    content: 'Content for DJ PARTY @ GOA',
-  },
-  {
-    label: 'SCUBA DIVING UNDER WATER',
-    thumbnail: thumb2,
-    link: 'https://youtu.be/6ZGtBQkYYkU?si=-XSxebZ6f2aUE2WM',
-    content: 'Content for SCUBA DIVING UNDER WATER',
-  },
-  // ... other tabs
-];
+export default function TabsComponent() {
+  const [openTab, setOpenTab] = useState(1);
 
-export default function VideoList() {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
-  const [tabUnderlineWidth, setTabUnderlineWidth] = useState(0);
-  const [tabUnderlineLeft, setTabUnderlineLeft] = useState(0);
-
-  const tabsRef = useRef([]);
-
-  useEffect(() => {
-    function setTabPosition() {
-      const currentTab = tabsRef.current[activeTabIndex];
-      setTabUnderlineLeft(currentTab?.offsetLeft ?? 0);
-      setTabUnderlineWidth(currentTab?.clientWidth ?? 0);
-    }
-
-    setTabPosition();
-    window.addEventListener('resize', setTabPosition);
-
-    return () => window.removeEventListener('resize', setTabPosition);
-  }, [activeTabIndex]);
 
   return (
     <div>
-      <div className="relative">
-        <div className="border-b">
-          {tabsData.map((tab, idx) => (
-            <button
-              key={idx}
-              ref={(el) => (tabsRef.current[idx] = el)}
-              className={`pt-2 pb-3 ${idx === activeTabIndex ? 'text-blue-600 border-b-2 border-blue-500' : 'text-gray-500 hover:text-blue-600'}`}
-              onClick={() => setActiveTabIndex(idx)}
-            >
-              {tab.label}
-            </button>
-          ))}
+      <div className="container mx-auto my-12 ">
+        < center> <h1 className="my-font text-4xl my-5 mb-14">Little Glimpse Of Hindustan Rides</h1></center>
+        <div className="flex flex-row space-x-20 items-center justify-center ">
+
+          <ul className="flex flex-col max-h-[500px] max-w-[380px] overflow-y-auto overflow-x-hidden">
+            <li>
+              <a onClick={() => setOpenTab(1)}
+                className={` ${openTab === 1 ? "bg-purple-600 text-white" : ""} inline-block px-4 py-2 ml-2 text-gray-600 `}>
+                <div className="flex">
+                  <div className="h-14 w-24 relative">
+                    <img src={thumb1} className="h-14 w-24 ml-[-8px]" />
+                    <FaCirclePlay className="absolute mt-[-25px] ml-[60px] " size={20} fill="white" />
+                  </div>
+                  <p className="ml-2 mt-5">DJ PARTY @ GOA</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setOpenTab(2)}
+                className={` ${openTab === 2 ? "bg-purple-600 text-white" : ""} inline-block px-4 py-2 text-gray-600 `}>
+                <div className="flex">
+                  <div className="h-14 w-24 relative">
+                    <img src={thumb2} className="h-14 w-24 " />
+                    <FaCirclePlay className="absolute mt-[-25px] ml-[70px] opacity-80" size={20} fill="white" />
+                  </div>
+                  <p className="ml-2 mt-5">SCUBA DIVING UNDER WATER</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setOpenTab(3)}
+                className={` ${openTab === 3 ? "bg-purple-600 text-white" : ""} inline-block px-4 py-2 text-gray-600 `} >
+                <div className="flex">
+                  <div className="h-14 w-24 relative">
+                    <img src={thumb3} className="h-14 w-24 " />
+                    <FaCirclePlay className="absolute mt-[-25px] ml-[70px] opacity-80" size={20} fill="white" />
+                  </div>
+                  <p className="ml-2 mt-5">Casino dinner with bally show</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setOpenTab(4)}
+                className={` ${openTab === 3 ? "bg-purple-600 text-white" : ""} inline-block px-4 py-2 text-gray-600 `} >
+                <div className="flex">
+                  <div className="h-14 w-24 relative">
+                    <img src={thumb4} className="h-14 w-24 " />
+                    <FaCirclePlay className="absolute mt-[-25px] ml-[70px] opacity-80" size={20} fill="white" />
+                  </div>
+                  <p className="ml-2 mt-5">Banana rides advanture	</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setOpenTab(5)}
+                className={` ${openTab === 3 ? "bg-purple-600 text-white" : ""} inline-block px-4 py-2 text-gray-600 `} >
+                <div className="flex">
+                  <div className="h-14 w-24 relative">
+                    <img src={thumb5} className="h-14 w-24 " />
+                    <FaCirclePlay className="absolute mt-[-25px] ml-[70px] opacity-80" size={20} fill="white" />
+                  </div>
+                  <p className="ml-2 mt-5">Jetski rides advanture</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setOpenTab(6)}
+                className={` ${openTab === 3 ? "bg-purple-600 text-white" : ""} inline-block px-4 py-2 text-gray-600 `} >
+                <div className="flex">
+                  <div className="h-14 w-24 relative">
+                    <img src={thumb6} className="h-14 w-24 " />
+                    <FaCirclePlay className="absolute mt-[-25px] ml-[70px] opacity-80" size={20} fill="white" />
+                  </div>
+                  <p className="ml-2 mt-5">Dudhsagar Waterfall</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setOpenTab(7)}
+                className={` ${openTab === 3 ? "bg-purple-600 text-white" : ""} inline-block px-4 py-2 text-gray-600 `} >
+                <div className="flex">
+                  <div className="h-[60px] w-[120px]  relative">
+                    <img src={thumb7} className="h-[60px] w-[120px] " />
+                    <FaCirclePlay className="absolute mt-[-25px] ml-[70px] opacity-80" size={20} fill="white" />
+                  </div>
+                  <p className="ml-2 mt-2">Brand New Innova Crysta MT 2.4 VX 2023</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setOpenTab(8)}
+                className={` ${openTab === 3 ? "bg-purple-600 text-white" : ""} inline-block px-4 py-2 text-gray-600 `} >
+                <div className="flex">
+                  <div className="h-14 w-24 relative">
+                    <img src={thumb8} className="h-14 w-24 " />
+                    <FaCirclePlay className="absolute mt-[-25px] ml-[70px] opacity-80" size={20} fill="white" />
+                  </div>
+                  <p className="ml-2 mt-5">Mahabaleshwar Sight Seen</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setOpenTab(9)}
+                className={` ${openTab === 3 ? "bg-purple-600 text-white" : ""} inline-block px-4 py-2 text-gray-600 `} >
+                <div className="flex">
+                  <div className="h-14 w-24 relative">
+                    <img src={thumb9} className="h-14 w-24 " />
+                    <FaCirclePlay className="absolute mt-[-25px] ml-[70px] opacity-80" size={20} fill="white" />
+                  </div>
+                  <p className="ml-2 mt-2">Swiming advanture at arebian sea</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <div className="p-3 bg-white ">
+
+            <div className={openTab === 1 ? "block" : "hidden"}>
+              <iframe
+                title="YouTube Video 1"
+                width="760"
+                height="415"
+                src="https://www.youtube.com/embed/ey4LD_iWNAU?si=XjNsAJK2t9TUt-Zb"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className={openTab === 2 ? "block" : "hidden"}>
+              <iframe
+                title="YouTube Video 2"
+                width="760"
+                height="415"
+                src="https://www.youtube.com/embed/6ZGtBQkYYkU"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className={openTab === 3 ? "block" : "hidden"}>
+              <iframe
+                title="YouTube Video 1"
+                width="760"
+                height="415"
+                src="https://www.youtube.com/embed/duQsmayFsZM"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div className={openTab === 4 ? "block" : "hidden"}>
+              <iframe
+                title="YouTube Video 1"
+                width="760"
+                height="415"
+                src="https://www.youtube.com/embed/0t6pSPDbRJ4"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div className={openTab === 5 ? "block" : "hidden"}>
+              <iframe
+                title="YouTube Video 1"
+                width="760"
+                height="415"
+                src="https://www.youtube.com/embed/owBx79hcdiU"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div className={openTab === 6 ? "block" : "hidden"}>
+              <iframe
+                title="YouTube Video 1"
+                width="760"
+                height="415"
+                src="https://www.youtube.com/embed/o3vtcf2l920"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div className={openTab === 7 ? "block" : "hidden"}>
+              <iframe
+                title="YouTube Video 1"
+                width="760"
+                height="415"
+                src="https://www.youtube.com/embed/60DFeOX05bE"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div className={openTab === 8 ? "block" : "hidden"}>
+              <iframe
+                title="YouTube Video 1"
+                width="760"
+                height="415"
+                src="https://www.youtube.com/embed/75Gwlpjirlg"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div className={openTab === 9 ? "block" : "hidden"}>
+              <iframe
+                title="YouTube Video 1"
+                width="760"
+                height="415"
+                src="https://www.youtube.com/embed/n3thpYzdh64"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+          </div>
         </div>
-        <span
-          className="absolute bottom-0 block h-1 bg-teal-500 transition-all duration-300"
-          style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
-        />
-      </div>
-      <div className="py-4">
-        <img src={tabsData[activeTabIndex].thumbnail} alt={`Thumbnail for ${tabsData[activeTabIndex].label}`} className='w-10 h-10' />
-        <p>{tabsData[activeTabIndex].content}</p>
-        <a href={tabsData[activeTabIndex].link} target="_blank" rel="noopener noreferrer">
-          Watch Video
-        </a>
       </div>
     </div>
   );

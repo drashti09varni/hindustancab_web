@@ -109,7 +109,7 @@ export default function ContactUs() {
     <div className='flex flex-col justify-center items-center my-5'>
       <div className='lg:w-[1000px] xmd:w-[1000px] md:w-[835px] xsm:w-[660px] sm:w-[472px] xl:w-[350px] 2xl:w-[343px] bg-[#f4f4f4] p-10'>
         <h1 className='text-[30px] font-[800] font-mont text-center'>Request A Call Back</h1>
-        <p className='text-[15px] text-center font-mont mt-2'>Buzzway is one of the leading online cab booking platform in Rajkot(Gujrat) which offers riders a stop solution to book cabs of their choice for their Intercity as well as Local travel needs. We target to grip technology as a platform to remove the gap between Riders and Cab Partners to book and accept their travel bookings in Rajkot (India). One can easily book the cab of their choice in just 30 seconds and that too with affordable fares.Request a call back to connect with us.</p>
+        <p className='text-[15px] text-center font-mont mt-2'>Hindustanrides is one of the leading online cab booking platform in Rajkot(Gujrat) which offers riders a stop solution to book cabs of their choice for their Intercity as well as Local travel needs. We target to grip technology as a platform to remove the gap between Riders and Cab Partners to book and accept their travel bookings in Rajkot (India). One can easily book the cab of their choice in just 30 seconds and that too with affordable fares.Request a call back to connect with us.</p>
       </div>
       <div className='bg-[#144298] lg:w-[1250px] xmd:w-[1000px] md:w-[920px] xsm:w-[740px] sm:w-[470px] xl:w-[350px]  xl:w-[200px]'>
         <div className="flex flex-col items-center bg-gray-200 text-gray-800">
@@ -135,7 +135,7 @@ export default function ContactUs() {
                   </div>
                   <div className="flex flex-col  ml-4">
                     <div className="text-[16px] text-[#fff] font-mont">E-Mail Us</div>
-                    <div className=" text-[#fff] font-mont mailto:text-[16px]">booking@buzzway.in</div>
+                    <div className=" text-[#fff] font-mont mailto:text-[16px]">booking@hindustanrides.in</div>
                   </div>
                 </div>
               </div>

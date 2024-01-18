@@ -66,6 +66,7 @@ console.log(selectData);
       toast.success(jsonResponse.message);
       setFormData(initialValue);
       setSelectedDate("");
+
       window.location.href = `https://api.whatsapp.com/send?phone=917600060604&text=Name : ${jsonResponse.result.name}
         ,Email : ${jsonResponse.result.email},
         Date : ${jsonResponse.result.date}, Message:${jsonResponse.result.message}, 
@@ -196,7 +197,9 @@ console.log(selectData);
             {/* <a   href="https://api.whatsapp.com/send?phone=918320655521&text=WHATEVER_LINK_OR_TEXT_YOU_WANT_TO_SEND">
               Submit
               </a> */}
+      
           </div>
+           
         </form>
       </div>
     

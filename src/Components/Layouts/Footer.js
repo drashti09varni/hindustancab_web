@@ -282,7 +282,7 @@ export default function Footer() {
                                     <p className='ml-2'> +91-9054865866 </p> </div>
                                 <div className='flex py-1'>
                                     <HiMail size={28} />
-                                    <p className='ml-2'> booking@buzzway.in </p> </div>
+                                    <p className='ml-2'> booking@hindustanrides.in </p> </div>
                                 <div className='flex py-1'>
                                     <FaHome size={90} />
                                     <p className='ml-2'>  Shakti Plaza, 15 A Jagnath Plot Opp. Hotel Imperial Palace Rajkot, Gujarat 360001  </p> </div>
@@ -302,7 +302,7 @@ export default function Footer() {
 
             <footer className="bg-[#010712] text-[#fff] py-4">
                 <div className="container mx-auto flex justify-center font-mont">
-                    <p>© 2021 | All Rights Reserved by Buzzway And Promoted and Design By Duplex Technologies</p>
+                    <p>© 2021 | All Rights Reserved by Hindustanrides And Promoted and Design By Duplex Technologies</p>
                 </div>
             </footer>
 
