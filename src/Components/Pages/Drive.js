@@ -82,10 +82,10 @@ export default function Driver() {
                     </p>
                 </div>
 
-                <div className="flex justify-center items-center  bg-blue-400 lg:w-[85%] xmd:w-[85%] md:w-[85%] xsm:w-[85%] sm:w-[97%] 
+                <div className="flex justify-center items-center lg:w-[85%] xmd:w-[85%] md:w-[85%] xsm:w-[85%] sm:w-[97%] 
                 xl:w-[98%] 2xl:w-[98%]
                 lg:mt-[-100px] xmd:mt-[-100px] md:mt-[-100px] xsm:mt-[-100px] sm:mt-[10px]">
-                    <div className="w-full bg-[#fcb407] rounded shadow-2xl px-8 py-4 m-4">
+                    <div className="w-full bg-yellow rounded shadow-2xl px-8 py-4 m-4">
                         <h1 className="block w-full text-center text-gray-800 text-2xl font-bold mb-2 font-mont">Get in touch</h1>
                         <form>
                             <div className="flex flex-col mb-3">

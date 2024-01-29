@@ -75,6 +75,10 @@ export default function Header() {
                                     className="text-[18px] font-semibold text-blue-800  my-5 transition-all hover:text-orange-500">
                                     Driver
                                 </a> </Link>
+                                <Link to="/blogs" className="my-2" ><a oxnClick={() => setOpenNav(false)} href="#faq"
+                                    className="text-[18px] font-semibold text-blue-800  my-5 transition-all hover:text-orange-500">
+                                    Blog
+                                </a> </Link>
                                 <Link to="/contact-us" className="my-2"> <a onClick={() => setOpenNav(false)}
                                     className="text-[18px] font-semibold text-blue-800  py-5 transition-all hover:text-orange-500">
                                     Tour
@@ -119,6 +123,13 @@ export default function Header() {
                         <Link to="/tours">
                             <li href="#faq" className="text-[16px] lg:m-7 xlg:m-6 xmd:m-4 font-bold transition-all">
                                 Tour
+                            </li>
+                        </Link>
+                          <li className="text-xl mt-[-5px] font-bold">|</li>
+
+                        <Link to="/blogs">
+                            <li href="#faq" className="text-[16px] lg:m-7 xlg:m-6 xmd:m-4 font-bold transition-all">
+                                Blog
                             </li>
                         </Link>
                         <li className="text-xl mt-[-5px] font-bold">|</li>

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 
 export default function Memories() {
     const [data, setData] = useState([]);
@@ -25,23 +26,31 @@ export default function Memories() {
         fatchData();
     }, []);
     return <>
-        <div className="flex flex-col items-center justify-center min-h-screen">
-      <center className='text-3xl font-mont font-bold mb-8 my-font'>Best Of Our Memories</center>
-      <div className="container mx-auto my-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-          {data?.map((item, i) => (
-            <div key={i} className="flex justify-center h-[300px]">
-              <article className="overflow-hidden rounded-lg shadow-lg">
-                <img
-                  src={`http://193.203.162.218:4200/uploads/memories/${item.memoriesImg}`}
-                  alt={`Memory ${i + 1}`}
-                  className='object-cover object-top h-[300px] w-[330px]'
-                />
-              </article>
-            </div>
-          ))}
+   
+ 
+    <div class="antialiased bg-gray-200 text-gray-900 font-sans p-6">
+  <div class="container mx-auto">
+    <center className='my-font text-4xl py-5'>Best of our Memories
+    </center>
+    <div class="grid lg:grid-cols-4 xlg:grid-cols-4 xmd:grid-cols-3 xsm:grid-cols-3 sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-1">
+    {data.length > 0 ? (
+            data.slice(0, 8).map((item,i) => (
+      <div class="w-full  p-4" key={i}>
+        <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+        <div class="relative pb-48 overflow-hidden">
+          <img class="absolute inset-0 h-full w-full object-cover object-top"  src={`http://193.203.162.218:4200/uploads/memories/${item.memoriesImg}`}/>
         </div>
-      </div>
+      </a>
+      </div>))):""}
+     
     </div>
+    <div class="flex justify-center">
+      <Link to='/gallery'><button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded
+      bg-yellow border-2 border-yellow hover:bg-[#fff] hover:border-2 hover:border-yellow">View More</button></Link>
+    </div>
+    
+  </div>
+</div>
+
     </>
 }

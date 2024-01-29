@@ -194,20 +194,14 @@ console.log(selectData);
 
             >Submit
             </button>
-            {/* <a   href="https://api.whatsapp.com/send?phone=918320655521&text=WHATEVER_LINK_OR_TEXT_YOU_WANT_TO_SEND">
+
+            {/* <a href="https://api.whatsapp.com/send?phone=918320655521&text=WHATEVER_LINK_OR_TEXT_YOU_WANT_TO_SEND">
               Submit
               </a> */}
-      
-          </div>
-           
+              </div>
         </form>
-      </div>
-    
+      </div>    
     </div>
-
-
-
-
   </>
 
 }
